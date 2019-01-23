@@ -14,6 +14,12 @@
       <h1 v-if="num >= 10">10</h1>
       <h2 v-else-if="num >= 5">5</h2>
       <h3 v-else>4未満</h3>
+
+      <ul>
+        <li v-for="todo in todos">
+          <p>{{ todo.id }} {{ todo.text }}</p>
+        </li>
+      </ul>
     </div>
 
 
@@ -24,8 +30,12 @@
       data: {
           message: "Helllo",
           num: 4,
+          todos: [
+            {id:1, text: "eat soba"},
+            {id:2, text: "clean my room"},
+            {id:3, text: "go home"},
+          ]
       }
-
     });
   </script>
 </html>
