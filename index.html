@@ -6,7 +6,10 @@
   </head>
   <script src="https://unpkg.com/vue"></script>
   <body>
-    <div id=app>{{ message }}</div>
+    <div id=app>
+      <input v-model="message" type="text">
+      <p>{{ message }}</p>
+    </div>
 
 
   </body>
