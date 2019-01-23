@@ -9,6 +9,11 @@
     <div id=app>
       <input v-model="message" type="text">
       <p>{{ message }}</p>
+
+      <input v-model="num" type="text">
+      <h1 v-if="num >= 10">10</h1>
+      <h2 v-else-if="num >= 5">5</h2>
+      <h3 v-else>4未満</h3>
     </div>
 
 
@@ -17,8 +22,10 @@
     var app = new Vue({
       el: "#app",
       data: {
-          message: "Helllo"
+          message: "Helllo",
+          num: 4,
       }
+
     });
   </script>
 </html>
