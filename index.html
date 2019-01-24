@@ -20,6 +20,8 @@
           <p>{{ todo.id }} {{ todo.text }}</p>
         </li>
       </ul>
+
+      <input type="button" value="push" v-on:click="tapButton()">
     </div>
 
 
@@ -35,6 +37,11 @@
             {id:2, text: "clean my room"},
             {id:3, text: "go home"},
           ]
+      },
+      methods:{
+        tapButton(){
+          console.log("tapped")
+        }
       }
     });
   </script>
