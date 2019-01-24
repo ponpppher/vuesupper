@@ -3,6 +3,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html">
+    <style>
+      .btn-toggle {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        color: #fff;
+        background-color: #333;
+        border: none;
+        /* 丸めのボタンを作る */
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: thin;
+        box-shadow: #000 1px 1px 1px;
+      }
+
+      /*
+       v-bindで指定したis-activeがtrueとなる場合ブラウンになる
+      */
+      .btn-toggle.is-active {
+        background-color: brown;
+      }
+    </style>
   </head>
   <script src="https://unpkg.com/vue"></script>
   <body>
@@ -21,7 +43,10 @@
         </li>
       </ul>
 
-      <input type="button" value="push" v-on:click="tapButton()">
+      <input type="button" value="push" v-on:click="tapButton()"/>
+
+      <!-- tabButtonのメソッドを呼び出し、toggleFlagの真理値を入れ替える-->
+      <input type="button" value="Button" class="btn-toggle" @click="tapButton()" :class="{'is-active': toggleFlag}"/>
     </div>
 
 
@@ -36,11 +61,13 @@
             {id:1, text: "eat soba"},
             {id:2, text: "clean my room"},
             {id:3, text: "go home"},
-          ]
+          ],
+          toggleFlag: false,
       },
       methods:{
         tapButton(){
           console.log("tapped")
+          this.toggleFlag = !this.toggleFlag;
         }
       }
     });
