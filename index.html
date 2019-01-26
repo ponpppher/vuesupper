@@ -47,9 +47,17 @@
 
       <!-- tabButtonのメソッドを呼び出し、toggleFlagの真理値を入れ替える-->
       <input type="button" value="Button" class="btn-toggle" @click="tapButton()" :class="{'is-active': toggleFlag}"/>
+
     </div>
-
-
+    <div id="app7">
+      <ol>
+        <todo-item
+          v-for='item in groceryList'
+          v-bind:todo='item'
+          v-bind:key='item.id'
+        ></todo-item>
+      </ol>
+    </div>
   </body>
   <script>
     var app = new Vue({
@@ -71,5 +79,20 @@
         }
       }
     });
+    Vue.component('todo-item', {
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>'
+    });
+
+    var app7 = new Vue({
+      el: '#app7',
+      data: {
+        groceryList: [
+            { id: 0, text: 'Vegetables' },
+            { id: 1, text: 'Cheese' },
+            { id: 2, text: 'Whaerenn' },
+        ]
+      }
+    })
   </script>
 </html>
