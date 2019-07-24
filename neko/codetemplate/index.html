@@ -11,16 +11,22 @@
       <ol>
         <li v-for="item in list">{{ item }}</li>
       </ol>
+
       <!--click event-->
       <button v-on:click="handleClick">Click</button>
-      <!--list items-->
+
+      <!--input message-->
       <p>{{ message }}</p>
-      <!--input model-->
       <input v-model="message">
+
       <!--if show attribute is true then appear message -->
       <p v-if="show">hello vue</p>
 
-
+      <!--transition animetion-->
+      <button v-on:click="show=!show">switch</button>
+      <transition>
+        <p v-if="show">switch hello vue</p>
+      </transition>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>
