@@ -33,6 +33,11 @@
         <p v-if="show">switch hello vue</p>
       </transition>
 
+      <!--click counter-->
+      <button v-on:click="increment">increment</button>
+      <p> {{ click_count }}</p>
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>
     <script src="main.js"></script>
