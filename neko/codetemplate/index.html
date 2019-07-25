@@ -19,8 +19,13 @@
       <p>{{ message }}</p>
       <input v-model="message">
 
+      <!--input number message-->
+      <p>{{ num_message }}</p>
+      <input v-model.number="num_message">
+
       <!--if show attribute is true then appear message -->
       <p v-if="show">hello vue</p>
+      <br/>
 
       <!--transition animetion-->
       <button v-on:click="show=!show">switch</button>
