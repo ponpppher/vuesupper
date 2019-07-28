@@ -14,6 +14,12 @@ var app = new Vue({
       { key: 'aa', id: 33, name: 'dragon', hp: 500 },
     ]
   },
+  // add active property
+  created: function() {
+    this.list.forEach(function(item) {
+      this.$set(item, 'active', false)
+    }, this)
+  },
   methods: {
     doAdd: function() {
       var max = this.list.reduce(function(a, b){

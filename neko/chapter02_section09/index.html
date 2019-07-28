@@ -60,6 +60,12 @@
             <button v-on:click="doRemove(index)">del</button>
           </li>
         </ul>
+
+        <p>add property</p>
+        <li v-for="item in list" v-bind:key="item.id">
+          {{ item.id }} {{ item.name }} {{ item.hp }} {{ item.active }}
+        </li>
+
       </ul>
 
     </div>
