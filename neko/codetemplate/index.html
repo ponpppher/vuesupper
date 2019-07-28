@@ -45,6 +45,8 @@
       <p v-bind:class="{child: isChild, 'is-active': isActive}">text</p>      
       <p v-bind:style="{color: textColor, backgroundColor: bgColor}">colortext</p>
 
+      <!--ternary operator-->
+      <p v-bind:class="[isTernaryActive? 'active' : 'normal', otherClass]">ternary text</p>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>

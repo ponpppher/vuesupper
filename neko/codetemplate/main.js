@@ -14,6 +14,10 @@ var app = new Vue({
     isActive: true,
     textColor: 'red',
     bgColor: 'lightgray',
+
+    //ternary operator
+    isTernaryActive: false,
+  
   },
   methods: {
     handleClick: function(e) { //click event
