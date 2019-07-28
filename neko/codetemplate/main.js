@@ -5,7 +5,9 @@ var app = new Vue({
     message: "first message", // input model
     num_message: "number input", // input number model
     show: true, //show paragraph
-    click_count: 0
+    click_count: 0,
+    propmessage: "ohoho", //prop message
+    scroll:100 //prop scroll
   },
   methods: {
     handleClick: function(e) { //click event

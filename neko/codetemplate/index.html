@@ -37,6 +37,11 @@
       <button v-on:click="increment">increment</button>
       <p> {{ click_count }}</p>
 
+      <!--prop-->
+      <div v-bind:text-content.prop="propmessage">ahaha</div>
+      <div v-bind:scroll-top.prop="scroll">{{ scroll }}</div>
+
+      
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>
