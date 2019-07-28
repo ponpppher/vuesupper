@@ -35,7 +35,10 @@ var app = new Vue({
       alt: 'thumbnail item1',
       width: 100,
       height: 100
-    }
+    },
+
+    //SVG binding
+    radius: 50
   },
   methods: {
     handleClick: function(e) { //click event
