@@ -18,6 +18,15 @@ var app = new Vue({
     //ternary operator
     isTernaryActive: false,
   
+    //object
+    classObject: {
+      child: true,
+      'is-active': false
+    },
+    styleObject: {
+      color: 'red',
+      backgroundColor: 'lightgray'
+    }
   },
   methods: {
     handleClick: function(e) { //click event
