@@ -7,6 +7,28 @@
   </head>
   <body>
     <div id="app">
+      <!--v-if-->
+      <template v-if="ok">
+        <header>title</header>
+        <div>contents</div>
+      </template>
+
+      <div v-if="type== 'A'">
+        type is A
+      </div>
+      <div v-else-if="type == 'B'">
+        type is B
+      </div>
+      <div v-else>
+        type is C
+      </div>
+
+      <!-- listdata -->
+      <ul>
+        <li v-for="item in list" v-bind:key="item.id">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        </li>
+      </ul>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>
