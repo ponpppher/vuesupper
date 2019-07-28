@@ -7,7 +7,13 @@ var app = new Vue({
     show: true, //show paragraph
     click_count: 0,
     propmessage: "ohoho", //prop message
-    scroll:100 //prop scroll
+    scroll:100, //prop scroll
+
+    // class and style
+    isChild: true,
+    isActive: true,
+    textColor: 'red',
+    bgColor: 'lightgray',
   },
   methods: {
     handleClick: function(e) { //click event
