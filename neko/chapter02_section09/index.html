@@ -28,6 +28,16 @@
         <li v-for="item in list" v-bind:key="item.id">
           ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
         </li>
+
+        <!-- index -->
+        <li v-for="(item, index) in list">
+          {{ index }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        </li>
+
+        <!-- index key -->
+        <li v-for="(item, key, index) in keylist">
+          {{ index }} {{ item.key }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        </li>
       </ul>
 
     </div>
