@@ -9,9 +9,9 @@ var app = new Vue({
       { id: 3, name: 'dragon', hp: 500 },
     ],
     keylist: [
-      { key: 'nnnn', id: 1, name: 'slim', hp: 100 },
-      { key: 'kokoro', id: 2, name: 'goblin', hp: 200 },
-      { key: 'aa', id: 3, name: 'dragon', hp: 500 },
+      { key: 'nnnn', id: 11, name: 'slim', hp: 100 },
+      { key: 'kokoro', id: 22, name: 'goblin', hp: 200 },
+      { key: 'aa', id: 33, name: 'dragon', hp: 500 },
     ]
   },
   methods: {

@@ -38,6 +38,18 @@
         <li v-for="(item, key, index) in keylist">
           {{ index }} {{ item.key }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
         </li>
+
+        <p>over 300</p>
+        <li v-for="item in list" v-bind:key="item.id" v-bind:class="{tuyoi: item.hp > 300}">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+          <span v-if="item.hp > 300">strong!</span>
+        </li>
+
+        <p>under 300</p>
+        <li v-for="item in list" v-bind:key="item.id" v-if="item.hp < 300">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        </li>
+
       </ul>
 
     </div>
