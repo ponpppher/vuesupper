@@ -46,11 +46,14 @@
       <p v-bind:style="{color: textColor, backgroundColor: bgColor}">colortext</p>
 
       <!--ternary operator-->
-      <p v-bind:class="[isTernaryActive? 'active' : 'normal', otherClass]">ternary text</p>
+      <p v-bind:class="[isTernaryActive? 'active' : 'normal']">ternary text</p>
 
       <!--object data-->
       <p v-bind:class="classObject">class obj Text</p>
       <p v-bind:style="styleObject">style obj Text</p>
+
+      <!--multiple attributes-->
+      <img v-bind="imageitem">
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>

@@ -26,6 +26,15 @@ var app = new Vue({
     styleObject: {
       color: 'red',
       backgroundColor: 'lightgray'
+    },
+
+    //multiple attritubes
+    imageitem: {
+      id: 1,
+      src: 'item1.jpg',
+      alt: 'thumbnail item1',
+      width: 100,
+      height: 100
     }
   },
   methods: {
