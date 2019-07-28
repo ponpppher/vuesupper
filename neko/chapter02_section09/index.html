@@ -55,13 +55,11 @@
         <button v-on:click="doAdd">add monster</button>
         
         <ul>
-          <li v-for="item in list" v-bind:key="item.id">
+          <li v-for="(item, index) in list" v-bind:key="item.id">
             ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+            <button v-on:click="doRemove(index)">del</button>
           </li>
-
         </ul>
-        
-
       </ul>
 
     </div>

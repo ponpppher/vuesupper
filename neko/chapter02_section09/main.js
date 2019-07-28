@@ -25,6 +25,9 @@ var app = new Vue({
         hp: 500
       })
       this.name = ''
+    },
+    doRemove: function(index) {
+      this.list.splice(index, 1)
     }
   },
 })
