@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <!--list items-->
+      <ol>
+        <li v-for="item in list">{{ item }}</li>
+      </ol>
+
+      <!--click event-->
+      <button v-on:click="handleClick">Click</button>
+
+      <!--input message-->
+      <p>{{ message }}</p>
+      <input v-model="message">
+
+      <!--input number message-->
+      <p>{{ num_message }}</p>
+      <input v-model.number="num_message">
+
+      <!--if show attribute is true then appear message -->
+      <p v-if="show">hello vue</p>
+      <br/>
+
+      <!--transition animetion-->
+      <button v-on:click="show=!show">switch</button>
+      <transition>
+        <p v-if="show">switch hello vue</p>
+      </transition>
+
+      <!--click counter-->
+      <button v-on:click="increment">increment</button>
+      <p> {{ click_count }}</p>
+
+      <!--prop-->
+      <div v-bind:text-content.prop="propmessage">ahaha</div>
+      <div v-bind:scroll-top.prop="scroll">{{ scroll }}</div>
+
+      <!--class style binding-->
+      <p v-bind:class="{child: isChild, 'is-active': isActive}">text</p>      
+      <p v-bind:style="{color: textColor, backgroundColor: bgColor}">colortext</p>
+
+      <!--ternary operator-->
+      <p v-bind:class="[isTernaryActive? 'active' : 'normal']">ternary text</p>
+
+      <!--object data-->
+      <p v-bind:class="classObject">class obj Text</p>
+      <p v-bind:style="styleObject">style obj Text</p>
+
+      <!--multiple attributes-->
+      <img v-bind="imageitem">
+      <br/>
+
+      <!--SVG binding-->
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink" />
+      </svg>
+      <input type="range" min="0" max="100" v-model="radius">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
