@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
+    show: true,
     ok: true,
     type: 'B',
     list: [
@@ -14,6 +15,11 @@ var app = new Vue({
       { key: 'aa', id: 33, name: 'dragon', hp: 500 },
     ]
   },
+  // output root element
+  mounted: function() {
+    console.log(this.$el)
+    console.log(this.$refs.helloref)
+  },
   // add active property
   created: function() {
     this.list.forEach(function(item) {
@@ -21,6 +27,13 @@ var app = new Vue({
     }, this)
   },
   methods: {
+    handleClick() {
+      var count = this.$refs.count
+      if(count) {
+        count.innerText = parseInt(count.innerText, 10) + 1
+      }
+
+    },
     doAdd: function() {
       var max = this.list.reduce(function(a, b){
         return a.id > b.id ? a.id : b.id
