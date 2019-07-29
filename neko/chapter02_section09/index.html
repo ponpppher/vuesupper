@@ -66,6 +66,13 @@
           {{ item.id }} {{ item.name }} {{ item.hp }} {{ item.active }}
         </li>
 
+        <p>update property</p>
+        <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+          <span v-if="item.hp < 50">hinsi</span>
+          <button v-on:click="doAttack(index)">attack</button>
+        </li>
+
       </ul>
 
     </div>
