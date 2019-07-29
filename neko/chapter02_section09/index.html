@@ -7,72 +7,14 @@
   </head>
   <body>
     <div id="app">
-      <!--v-if-->
-      <template v-if="ok">
-        <header>title</header>
-        <div>contents</div>
-      </template>
 
-      <div v-if="type== 'A'">
-        type is A
-      </div>
-      <div v-else-if="type == 'B'">
-        type is B
-      </div>
-      <div v-else>
-        type is C
-      </div>
-
-      <!-- listdata -->
       <ul>
-        <li v-for="item in list" v-bind:key="item.id">
-          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        </li>
-
-        <!-- index -->
-        <li v-for="(item, index) in list">
-          {{ index }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        </li>
-
-        <!-- index key -->
-        <li v-for="(item, key, index) in keylist">
-          {{ index }} {{ item.key }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        </li>
-
-        <p>over 300</p>
-        <li v-for="item in list" v-bind:key="item.id" v-bind:class="{tuyoi: item.hp > 300}">
-          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-          <span v-if="item.hp > 300">strong!</span>
-        </li>
-
-        <p>under 300</p>
-        <li v-for="item in list" v-bind:key="item.id" v-if="item.hp < 300">
-          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        </li>
-
-        <p> add monster name</p>
-        name<input v-model="name">
-        <button v-on:click="doAdd">add monster</button>
-        
-        <ul>
-          <li v-for="(item, index) in list" v-bind:key="item.id">
-            ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-            <button v-on:click="doRemove(index)">del</button>
-          </li>
-        </ul>
-
-        <p>add property</p>
-        <li v-for="item in list" v-bind:key="item.id">
-          {{ item.id }} {{ item.name }} {{ item.hp }} {{ item.active }}
-        </li>
-
         <p>update property</p>
-        <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp">
+        <li v-for="(item, index) in list" v-bind:key="item.id">
           ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
           <span v-if="item.hp < 50">hinsi</span>
           <button v-on:click="doAttack(index)">attack</button>
         </li>
-
       </ul>
 
     </div>

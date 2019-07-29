@@ -34,6 +34,9 @@ var app = new Vue({
     },
     doAttack: function(index) {
       this.list[index].hp -= 10
+      this.list = this.list.filter(function(e) {
+        return e.hp >= 100
+      })
     },
     doRemove: function(index) {
       this.list.splice(index, 1)
