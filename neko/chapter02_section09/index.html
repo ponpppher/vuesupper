@@ -17,6 +17,17 @@
         </li>
       </ul>
 
+      <p>selector</p>
+      <select>
+        <option v-for="item in list">{{ item.name }}</option>
+      </select>
+
+      <p ref="helloref">hellll</p>
+
+      <button v-on:click="handleClick">count up</button>
+      <button v-on:click="show=!show">show/not show</button>
+      <span ref="count" v-if="show">0</span>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.12/dist/vue.js"></script>
     <script src="main.js"></script>
